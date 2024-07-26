@@ -1,7 +1,7 @@
 import { getCakes } from "@/lib/data";
 import React from "react";
 import { IoPencil, IoTrashOutline } from "react-icons/io5";
-import { EditButton } from "./button";
+import { DeleteButton, EditButton } from "./button";
 
 const CakeTable = async () => {
   const cakes = await getCakes();
@@ -38,10 +38,7 @@ const CakeTable = async () => {
             </td>
             <td className="flex w-32 min-w-32 max-w-32 items-center justify-center gap-x-1.5 px-6 py-3">
               <EditButton />
-
-              <button className="cursor-pointer rounded-sm border p-1 hover:bg-gray-100">
-                <IoTrashOutline size={20} />
-              </button>
+              <DeleteButton />
             </td>
           </tr>
         ))}
