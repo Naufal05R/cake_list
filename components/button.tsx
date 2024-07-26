@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { IoAddSharp } from "react-icons/io5";
+import { IoAddSharp, IoPencil } from "react-icons/io5";
 
 export const CreateButton = () => {
   return (
@@ -11,4 +11,13 @@ export const CreateButton = () => {
       Create
     </Link>
   );
+};
+
+export const EditButton = () => {
+  <Link
+    href={`/animals/edit/`}
+    className="inline-flex cursor-pointer rounded-sm border p-1 hover:bg-gray-100"
+  >
+    <IoPencil size={20} />
+  </Link>;
 };
