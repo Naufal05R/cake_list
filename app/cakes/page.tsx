@@ -1,4 +1,4 @@
-import { CreateButton } from "@/components/button";
+import { CreateButton } from "@/components/buttons";
 import CakeTable from "@/components/cake-table";
 import Search from "@/components/search";
 

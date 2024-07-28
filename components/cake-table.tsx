@@ -1,7 +1,7 @@
 import { getCakes } from "@/lib/data";
 import React from "react";
 import { IoPencil, IoTrashOutline } from "react-icons/io5";
-import { DeleteButton, EditButton } from "./button";
+import { DeleteButton, EditButton } from "./buttons";
 import { formatPrice } from "@/lib/utils";
 
 const CakeTable = async () => {
