@@ -1,4 +1,5 @@
 import { IoAddSharp, IoPencil, IoTrashOutline } from "react-icons/io5";
+import { VscSettings } from "react-icons/vsc";
 
 export const CreateButton = () => {
   return (
@@ -10,6 +11,14 @@ export const CreateButton = () => {
     </button>
   );
 };
+
+export const FilterButton = () => {
+  return (
+    <button className="inline-flex cursor-pointer rounded-sm border p-1 hover:bg-gray-100">
+      <VscSettings />
+    </button>
+  );
+}
 
 export const EditButton = () => {
   return (
