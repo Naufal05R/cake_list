@@ -3,6 +3,7 @@
 import { IoAddSharp, IoPencil, IoTrashOutline } from "react-icons/io5";
 import { VscSettings } from "react-icons/vsc";
 import { useState } from "react";
+import { FilterModal } from "./modals";
 
 export const CreateButton = () => {
   return (
@@ -16,8 +17,12 @@ export const CreateButton = () => {
 export const FilterButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <button onClick={() => setIsOpen(!isOpen)} className="inline-flex cursor-pointer items-center rounded-sm border p-2 text-sm hover:bg-gray-100">
+    <button
+      onClick={() => setIsOpen(!isOpen)}
+      className="inline-flex cursor-pointer items-center rounded-sm border p-2 text-sm hover:bg-gray-100"
+    >
       <VscSettings size={20} />
+      <FilterModal isOpen={isOpen} />
     </button>
   );
 };
