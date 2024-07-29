@@ -1,9 +1,8 @@
 import { cn } from "@/lib/utils";
-import { FaCheck, FaChessKing } from "react-icons/fa";
-import { GiCheckMark } from "react-icons/gi";
-import { MdCheck, MdOutlineCheck } from "react-icons/md";
+import { FaCheck } from "react-icons/fa";
 
 export const FilterModal = ({ isOpen }: { isOpen: boolean }) => {
+
   return (
     <article
       className={cn(
