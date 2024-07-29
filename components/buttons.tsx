@@ -20,7 +20,7 @@ export const FilterButton = () => {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex cursor-pointer items-center rounded-sm border p-2 text-sm hover:bg-gray-100"
+        className="inline-flex cursor-pointer items-center rounded-sm border bg-blue-700 p-2 text-sm text-white hover:bg-blue-800"
       >
         <VscSettings size={20} />
       </button>
