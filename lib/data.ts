@@ -5,3 +5,16 @@ export const getCakes = async () => {
 
   return cakes;
 };
+
+export const getAllCategories = async () => {
+  const categories = await db.cake.findMany({
+    select: {
+      category: true,
+    },
+    distinct: ["category"],
+  });
+
+  const uniqueCategories = categories.map((cake) => cake.category);
+
+  return uniqueCategories;
+};
