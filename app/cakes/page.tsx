@@ -1,4 +1,4 @@
-import { CreateButton, FilterButton, SortButton } from "@/components/buttons";
+import { CreateButton, FilterButton, SortButton, TypeButton } from "@/components/buttons";
 import CakeTable from "@/components/cake-table";
 import Search from "@/components/search";
 
@@ -8,6 +8,7 @@ export default function CakesPage({}) {
       <hgroup className="mb-5 flex items-center justify-between gap-1">
         <FilterButton />
         <SortButton />
+        <TypeButton />
         <Search />
         <CreateButton />
       </hgroup>
