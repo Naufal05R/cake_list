@@ -17,13 +17,15 @@ export const CreateButton = () => {
 export const FilterButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <button
-      onClick={() => setIsOpen(!isOpen)}
-      className="inline-flex cursor-pointer items-center rounded-sm border p-2 text-sm hover:bg-gray-100"
-    >
-      <VscSettings size={20} />
+    <>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="inline-flex cursor-pointer items-center rounded-sm border p-2 text-sm hover:bg-gray-100"
+      >
+        <VscSettings size={20} />
+      </button>
       <FilterModal isOpen={isOpen} />
-    </button>
+    </>
   );
 };
 
