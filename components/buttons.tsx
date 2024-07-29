@@ -34,15 +34,27 @@ export const FilterButton = () => {
 export const SortButton = () => {
   const [isTop, setIsTop] = useState(true);
   return (
-    <>
-      <button
-        onClick={() => setIsTop(!isTop)}
-        className="flex h-[38px] w-[38px] cursor-pointer items-center justify-center rounded-sm border bg-blue-700 text-sm text-white hover:bg-blue-800"
-      >
-        <IoMdArrowDropup className={cn({ hidden: isTop })} size={32} />
-        <IoMdArrowDropdown className={cn({ hidden: !isTop })} size={32} />
-      </button>
-    </>
+    <button
+      onClick={() => setIsTop(!isTop)}
+      className="flex h-[38px] w-[38px] cursor-pointer items-center justify-center rounded-sm border bg-blue-700 text-sm text-white hover:bg-blue-800"
+    >
+      <IoMdArrowDropup className={cn({ hidden: isTop })} size={32} />
+      <IoMdArrowDropdown className={cn({ hidden: !isTop })} size={32} />
+    </button>
+  );
+};
+
+export const TypeButton = () => {
+  const [spin, setSpin] = useState(0);
+  const types = ["name", "category", "price"];
+
+  return (
+    <button
+      onClick={() => setSpin(spin + 1)}
+      className="flex capitalize cursor-pointer w-28 items-center justify-center rounded-sm border bg-blue-700 px-4 py-2 text-sm font-bold text-white hover:bg-blue-800"
+    >
+      {types[spin % 3]}
+    </button>
   );
 };
 
